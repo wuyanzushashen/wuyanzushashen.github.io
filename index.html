@@ -3,12 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>测试</title>
+    <title>变色龙这一块</title>
+    <style>body{text-align: center;
+    padding: 50px;
+    transition: 0.5s;}
+    button{
+        font-size: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }</style>
 </head>
 <body>
-    <h1>啥也不是</h1>
-    <hr>
-    <h2>第一</h2>
-    <p>??</p>
+    <h1>点击按钮变色 </h1>
+    <br><br>
+    <button onclick="changeColor()">点我变色</button>
+    <script>function changeColor(){
+        let r=Math.floor(Math.random()*256);
+        let g=Math.floor(Math.random()*256);
+        let b=Math.floor(Math.random()*256);
+        let color="rgb("+r+","+g+","+b+")";
+        document.body.style.background=color;
+    }</script>
 </body>
 </html>
